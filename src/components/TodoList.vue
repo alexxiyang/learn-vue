@@ -11,7 +11,7 @@
          <th>任务</th>
        </thead>
       <tbody>
-        <tr v-for="task in parsedTaskList">
+        <tr v-for="task in parsedTaskList" v-bind:key="task">
           <td>
             <span v-if="isDone(task)" style="color:gray;text-decoration:line-through;">{{ task }}</span>
             <span v-else >{{ task }}</span>
